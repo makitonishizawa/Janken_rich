@@ -1,11 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-    
+<h1>算数ゲーム</h1>
+
+<div id="start_button">
+    <button id="start" data-name="btn_start">スタート</button> 
+</div>
+
+<div id="tokuten1">
+    <div id="tokuten">0</div>
+</div>
+
+<div id="formula">
+    <div id="left"></div>
+    <div id="sign"></div>
+    <div id="middle"></div>
+    <div id="middle"></div>
+    <div id="equal">=</div>
+    <div id="right"></div>
+</div>
+
+    <div id="kaitou">
+        <div>
+            <input type="number" id="numberInput" placeholder="数値を入力してください">
+            <!-- <p>入力された数値: <span id="display"></span></p> -->
+        </div>
+    </div>
+
+    <div id="kotae">
+        <div id="hantei"></div>
+    </div>
+
+<!-- Jqueryの読み込み（記述が絶対に先！ -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<!-- js/test.jsは絶対にjqueryの後 -->
+<script src="script.js"></script>
+
 </body>
 </html>

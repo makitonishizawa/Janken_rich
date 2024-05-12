@@ -1,0 +1,29 @@
+h1 {
+    display: flex;
+    justify-content: center;
+}
+#start_button {
+    display: flex;
+    justify-content: center;
+}
+#formula {
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#kaitou {
+    display: flex;
+    justify-content: center;
+}
+
+#kotae {
+    display: flex;
+    justify-content: center;
+}
+
+#tokuten1 {
+    display: flex;
+    justify-content: center;
+}
