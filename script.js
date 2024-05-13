@@ -11,12 +11,41 @@ var score;
 var currentScore;
 var newScore;
 
+var initialDuration = 60; // 1分 = 60秒
+var duration;  //カウントダウン用の変数を初期化
+var display = $('#timer');
+var timer;
+
+
 $("#equal").hide()
 $("#numberInput").hide()
 $("#tokuten").hide()
 currentScore = 0
 
 $("#start").on('click', function(){
+   
+    clearInterval(timer); // 既にタイマーが動作している場合は停止
+        duration = initialDuration; // 時間をリセット
+        display.text("01:00"); // 表示をリセット
+
+        timer = setInterval(function() {
+            var minutes = parseInt(duration / 60, 10);
+            var seconds = parseInt(duration % 60, 10);
+
+            minutes = minutes < 10 ? "0" + minutes : minutes;   //10より小さい場合は先頭に0付ける
+            seconds = seconds < 10 ? "0" + seconds : seconds;　 //10より小さい場合は先頭に0付ける
+            //条件 ? 真の場合 : 偽の場合。　常に二けたを表示させるためのコード
+
+            display.text(minutes + ":" + seconds);
+
+            if (--duration < 0) {
+                clearInterval(timer);
+                display.text("時間です！");
+                timer = null; // タイマーをリセット
+            }
+        }, 1000)
+   
+   
     $("#numberInput").val('')
     $("#numberInput").show()
     $("#numberInput").focus()
