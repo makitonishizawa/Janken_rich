@@ -1,6 +1,24 @@
+
+
+body {
+    background-color: rgb(154, 219, 228);
+}
+
+
+#container {
+    margin-top: 10px;
+    padding: 10px;
+    height: 500px;
+    width: 1000px;
+    background-color: rgb(94, 148, 224);
+    margin:0 auto;
+    border-radius: 10px
+}
+
 h1 {
     display: flex;
     justify-content: center;
+    color: rgb(61, 61, 234)
 }
 #start_button {
     display: flex;
@@ -8,10 +26,18 @@ h1 {
     margin-top: 50px;
     margin-bottom: 50px;
 }
+#start {
+    font-size: 30px;
+    border-radius: 10px; /* 角の丸み */
+    color: white;
+    background-color: rgb(63, 22, 230);
+}
+
+
 #formula {
     display: flex;
     justify-content: center;
-    font-size: 30px;
+    font-size: 60px;
     font-weight: bold;
     margin-top: 30px;
 }
@@ -20,6 +46,7 @@ h1 {
     display: flex;
     justify-content: center;
     margin-top: 30px;
+    font-size: 40px;
 }
 
 #kotae {
@@ -27,14 +54,104 @@ h1 {
     justify-content: center;
     margin-top: 30px;
 }
+#numberInput {
+    font-size: 40px;
+    width: 350px
+
+}
+
+
 
 #tokuten1 {
     margin-top: 30px;
     display: flex;
     justify-content: center;
+    font-size: 40px;
 }
 
-#timer {
+#timerContent { 
     display: flex;
     justify-content: center;
+    align-items: center;
 }
+#timer {
+
+    font-family: 'orbitron', sans-serif; /* フォントの指定 */
+    color: #ffffff; /* 文字色 */
+    background-color:black; /* 背景色 */
+    font-size: 24px; /* 文字サイズ */
+    text-align: center; /* 中央揃え */
+    width: 150px; /* 幅の指定 */
+    padding: 10px; /* パディング */
+    border-radius: 10px; /* 角の丸み */
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5); /* 影の追加 */
+
+
+}
+
+/* ポップアップの設定 */
+.popup{ 
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,.5);
+  }
+  .popup.view{
+    display: flex;
+  }
+  .popup__inner{
+    display: inline-block;
+    background: #fff;
+    padding: 50px;
+    box-shadow: 0 0 5px rgba(0,0,0,.25);
+    position: relative;
+  }
+  .popup__title{
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-align: center;
+  }
+  .popup__body{
+    font-size: 50px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-align: center;
+    color: red;
+  }
+
+  .popup__body2{
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .popup__body_total{
+    justify-content: center;
+  }
+
+  .close{
+    right: 0;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    color: #fff;
+    background: #dc5a45;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .close:hover{
+    opacity: .6;
+  }
+

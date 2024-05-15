@@ -7,40 +7,62 @@
     <title>Document</title>
 </head>
 <body>
-<h1>算数ゲーム</h1>
+<h1>🧮足し算引き算ゲーム🧮</h1>
 
-<div id="start_button">
-    <button id="start" data-name="btn_start">スタート</button> 
-</div>
+<div id="container">
 
-<div id="timer">01:00</div>
+    <div id="start_button">
+        <button id="start" data-name="btn_start">スタート</button> 
+    </div>
 
+    <div id="timerContent">
+        <div id="timer">01:00</div>
+    </div>
 
-<div id="tokuten1">
-    <div id="tokuten">0</div>
-</div>
+    <div id="tokuten1">
+        <div id="tokuten">0</div>
+    </div>
 
-<div id="formula">
-    <div id="left"></div>
-    <div id="sign"></div>
-    <div id="middle"></div>
-    <div id="middle"></div>
-    <div id="equal">=</div>
-    <div id="right"></div>
-</div>
+    <div id="formula">
+        <div id="left"></div>
+        <div id="sign"></div>
+        <div id="middle"></div>
+        <div id="middle"></div>
+        <div id="equal">=</div>
+        <div id="right"></div>
+    </div>
 
-    <div id="kaitou">
-        <div>
-            <input type="number" id="numberInput" placeholder="数値を入力してください">
-            <!-- <p>入力された数値: <span id="display"></span></p> -->
+        <div id="kaitou">
+            <div>
+                <input type="number" id="numberInput" placeholder="答えを入力">
+                <!-- <p>入力された数値: <span id="display"></span></p> -->
+            </div>
         </div>
-    </div>
 
-    <div id="kotae">
-        <div id="hantei"></div>
-    </div>
+        <div id="kotae">
+            <div id="hantei"></div>
+        </div>
 
-<!-- Jqueryの読み込み（記述が絶対に先！ -->
+        <div class="popup">
+            <div class="popup__inner">
+                <div class="popup__title">あなたのスコアは</div>
+                <div class="popup__body_total">
+                    <div class="popup__body"></div>
+                    <div class="popup__body2">です</div>
+                </div>
+                <div class="close">×</div>
+            </div>
+        </div>
+
+</div>
+
+
+    <audio src="sound/start.mp3" id="audio_start"></audio>
+    <audio src="sound/end.mp3" id="audio_end"></audio>
+    <audio src="sound/seikai.mp3" id="audio_seikai"></audio>
+    <audio src="sound/fuseikai.mp3" id="audio_fuseikai"></audio>
+
+    <!-- Jqueryの読み込み（記述が絶対に先！ -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
 <!-- js/test.jsは絶対にjqueryの後 -->
