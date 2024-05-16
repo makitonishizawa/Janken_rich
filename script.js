@@ -11,7 +11,7 @@ var score;
 var currentScore;
 var newScore;
 
-var initialDuration = 20; // 1分 = 60秒
+var initialDuration = 30; // 1分 = 60秒
 var duration;  //カウントダウン用の変数を初期化
 var display = $('#timer');
 var timer;
@@ -33,7 +33,7 @@ $("#start").on('click', function(){
 
     clearInterval(timer); // 既にタイマーが動作している場合は停止
         duration = initialDuration; // 時間をリセット
-        display.text("01:00"); // 表示をリセット
+        display.text("00:30"); // 表示をリセット
 
         timer = setInterval(function() {
             var minutes = parseInt(duration / 60, 10);
@@ -136,7 +136,7 @@ $("#start").on('click', function(){
                 // }
                 
                     if(number == blank){
-                        $("#hantei").html("正解")
+                        $("#hantei").html("正解!")
                         $("#hantei").show()
 
                         
@@ -147,7 +147,10 @@ $("#start").on('click', function(){
                                 newScore = currentScore + 100;
                                 // 更新されたスコアを表示します
                                 $('#tokuten').text(newScore);
-                                $('#tokuten').show(newScore);
+                                $('#tokuten').delay(1000).queue(function(next){
+                                    $(this).show(newScore);
+                                    next();
+                                        })
                                 $('#audio_seikai').get(0).play()
 
                                 $("#hantei").delay(1000).queue(function(next){

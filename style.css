@@ -1,7 +1,7 @@
 
 
 body {
-    background-color: rgb(154, 219, 228);
+    background-color: white;
 }
 
 
@@ -10,7 +10,7 @@ body {
     padding: 10px;
     height: 500px;
     width: 1000px;
-    background-color: rgb(94, 148, 224);
+    background-color: #006633;
     margin:0 auto;
     border-radius: 10px
 }
@@ -18,12 +18,12 @@ body {
 h1 {
     display: flex;
     justify-content: center;
-    color: rgb(61, 61, 234)
+    color: black
 }
 #start_button {
     display: flex;
     justify-content: center;
-    margin-top: 50px;
+    margin-top: 10px;
     margin-bottom: 50px;
 }
 #start {
@@ -40,6 +40,7 @@ h1 {
     font-size: 60px;
     font-weight: bold;
     margin-top: 30px;
+    color: white;
 }
 
 #kaitou {
@@ -57,16 +58,14 @@ h1 {
 #numberInput {
     font-size: 40px;
     width: 350px
-
 }
-
-
 
 #tokuten1 {
     margin-top: 30px;
     display: flex;
     justify-content: center;
     font-size: 40px;
+    color: white;
 }
 
 #timerContent { 
@@ -74,8 +73,8 @@ h1 {
     justify-content: center;
     align-items: center;
 }
-#timer {
 
+#timer {
     font-family: 'orbitron', sans-serif; /* フォントの指定 */
     color: #ffffff; /* 文字色 */
     background-color:black; /* 背景色 */
@@ -85,7 +84,12 @@ h1 {
     padding: 10px; /* パディング */
     border-radius: 10px; /* 角の丸み */
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5); /* 影の追加 */
+}
 
+#hantei {
+    font-size: 60px;
+    font-weight: bold;
+    color:white;
 
 }
 
